@@ -1,0 +1,93 @@
+
+[
+    {
+        "recipe_image": "https://i.ibb.co.com/Sx4WNFm/Rectangle-20170-1.png",
+        "recipe_id": "01",
+        "recipe_name": "Spaghetti Bolognese",
+        "short_description": "A classic Italian pasta dish with a rich, savory meat sauce.",
+        "ingredients": [
+            "400 g spaghetti",
+            "250 g ground beef",
+            "1 onion, chopped",
+            "2 cloves garlic, minced",
+            "400 g canned tomatoes"
+        ],
+        "preparing_time": "45 min",
+        "calories": "600 calories"
+    },
+    {
+        "recipe_image": "https://i.ibb.co.com/BL80Kc4/Rectangle-20170.png",
+        "recipe_id": "02",
+        "recipe_name": "Chicken Curry",
+        "short_description": "A flavorful and spicy curry with tender chicken pieces.",
+        "ingredients": [
+            "500 g chicken breast, cubed",
+            "2 tbsp curry powder",
+            "1 onion, chopped",
+            "3 cloves garlic, minced",
+            "1 tbsp ginger, grated"
+        ],
+        "preparing_time": "40 min",
+        "calories": "500 calories"
+    },
+    {
+        "recipe_image": "https://i.ibb.co.com/BL80Kc4/Rectangle-20170.png",
+        "recipe_id": "03",
+        "recipe_name": "Caesar Salad",
+        "short_description": "A crisp salad with a creamy Caesar dressing and crunchy croutons.",
+        "ingredients": [
+            "1 head romaine lettuce, chopped",
+            "1/2 cup Caesar dressing",
+            "1/4 cup grated Parmesan cheese",
+            "1 cup croutons",
+            "1 tbsp olive oil"
+        ],
+        "preparing_time": "15 min",
+        "calories": "300 calories"
+    },
+    {
+        "recipe_image": "https://i.ibb.co.com/Sx4WNFm/Rectangle-20170-1.png",
+        "recipe_id": "04",
+        "recipe_name": "Vegetable Stir Fry",
+        "short_description": "A quick and healthy stir fry with a variety of fresh vegetables.",
+        "ingredients": [
+            "200 g bell peppers, sliced",
+            "200 g broccoli florets",
+            "150 g snap peas",
+            "1 carrot, julienned",
+            "2 tbsp soy sauce"
+        ],
+        "preparing_time": "20 min",
+        "calories": "250 calories"
+    },
+    {
+        "recipe_image": "https://i.ibb.co.com/Sx4WNFm/Rectangle-20170-1.png",
+        "recipe_id": "05",
+        "recipe_name": "Pancakes",
+        "short_description": "Fluffy pancakes served with maple syrup and fresh fruit.",
+        "ingredients": [
+            "1 cup all-purpose flour",
+            "2 tbsp sugar",
+            "1 tbsp baking powder",
+            "1/2 tsp salt",
+            "1 cup milk"
+        ],
+        "preparing_time": "25 min",
+        "calories": "350 calories"
+    },
+    {
+        "recipe_image": "https://i.ibb.co.com/BL80Kc4/Rectangle-20170.png",
+        "recipe_id": "06",
+        "recipe_name": "Greek Yogurt Parfait",
+        "short_description": "A healthy and delicious parfait with Greek yogurt, honey, and fresh berries.",
+        "ingredients": [
+            "1 cup Greek yogurt",
+            "2 tbsp honey",
+            "1/2 cup granola",
+            "1/2 cup mixed berries",
+            "1 tbsp chia seeds"
+        ],
+        "preparing_time": "10 min",
+        "calories": "200 calories"
+    }
+]
