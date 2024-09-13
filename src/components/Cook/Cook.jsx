@@ -1,10 +1,8 @@
 import PropTypes from "prop-types";
 import { IoTimeOutline } from "react-icons/io5";
 import { FaFire } from "react-icons/fa";
-
-const Cook = ({ cook, handleAddReCipe }) => {
+const Cook = ({ cook, handleAddRecipe }) => {
   const {
-    
     recipe_image,
     recipe_name,
     short_description,
@@ -12,9 +10,10 @@ const Cook = ({ cook, handleAddReCipe }) => {
     preparing_time,
     calories,
   } = cook;
+
   return (
     <div className="w-[379px] p-6 shadow-2xl rounded-xl space-y-4">
-      <img src={recipe_image} alt="" />
+      <img src={recipe_image} alt={recipe_name} />
       <h1 className="text-[#282828] font-semibold text-[20px]">
         {recipe_name}
       </h1>
@@ -35,21 +34,27 @@ const Cook = ({ cook, handleAddReCipe }) => {
         </ul>
       </div>
       <div className="flex gap-6">
-        <div className="flex gap-2 place-items-center  text-[#282828CC] text-[16px]">
-          <p>
-            <IoTimeOutline />{" "}
-          </p>
+        <div className="flex gap-2 place-items-center text-[#282828CC] text-[16px]">
+          <IoTimeOutline />
           <p>{preparing_time}</p>
         </div>
-        <div className="flex gap-2 place-items-center  text-[#282828CC] text-[16px]">
-          <p>
-            <FaFire />
-          </p>
-          <p>{calories}</p>
+        <div className="flex gap-2 place-items-center text-[#282828CC] text-[16px]">
+          <FaFire />
+          <p>{calories} calories</p>
         </div>
       </div>
 
-      <button onClick={()=>handleAddReCipe( cook)} className="rounded-full bg-[#0BE58A] text-[#150B2B] text-[18px] px-6 py-[13px] ">
+      {/* Use Want to Cook button to add recipe */}
+      <button
+        onClick={() =>
+          handleAddRecipe({
+            recipe_name: recipe_name,
+            preparing_time: preparing_time,
+            calories: calories,
+          })
+        }
+        className="rounded-full bg-[#0BE58A] text-[#150B2B] text-[18px] px-6 py-[13px]"
+      >
         Want to Cook
       </button>
     </div>
@@ -57,8 +62,8 @@ const Cook = ({ cook, handleAddReCipe }) => {
 };
 
 Cook.propTypes = {
-  cook: PropTypes.object,
-  handleAddReCipe: PropTypes.func
+  cook: PropTypes.object.isRequired,
+  handleAddRecipe: PropTypes.func.isRequired,
 };
 
 export default Cook;

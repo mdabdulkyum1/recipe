@@ -1,39 +1,34 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from "react";
+import RecipeList from "./components/RecipeList";
+import Prepare from "./components/Prepare";
 
-import { useState } from 'react'
-import './App.css'
-import Banner from './components/Banner/Banner'
-import Cooks from './components/Cooks/Cooks'
-import Header from './components/Header/Header'
-import Prepares from './components/Prepares/Prepares'
-import Recipe from './components/Recipe/Recipe'
+const App = () => {
+  const [recipesData, setRecipesData] = useState([]);
+  const [preparedRecipes, setPreparedRecipes] = useState([]);
 
+  useEffect(() => {
+    // Fetch recipes from JSON file in public folder
+    fetch("/recipes.json")
+      .then((response) => response.json())
+      .then((data) => setRecipesData(data))
+      .catch((error) => console.error("Error fetching recipes:", error));
+  }, []);
 
-function App() {
-  let [recipes, setRecipes] = useState([])
+  const handleAddRecipe = (recipe) => {
+    setPreparedRecipes((prev) => {
+      const exists = prev.some((r) => r.recipe_id === recipe.recipe_id);
+      if (!exists) return [...prev, recipe];
+      return prev;
+    });
+  };
 
-  const handleAddReCipe =(cook)=>{
-    const newRecipes = [...recipes, cook]
-    setRecipes(newRecipes)
-
-
-  }
   return (
-    <>
-    <div className='w-[1240px] mx-auto py-6'>
-    <Header></Header>
-    <Banner></Banner>
-    <Recipe></Recipe>
-    <main className='flex gap-5 my-6'>
-      <Cooks
-      handleAddReCipe={handleAddReCipe}
-      ></Cooks>
-      <Prepares
-      recipes={recipes}
-      ></Prepares>
-    </main>
+    <div className="App">
+      <RecipeList recipes={recipesData} onAddRecipe={handleAddRecipe} />
+      <Prepare preparedRecipes={preparedRecipes} />
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
